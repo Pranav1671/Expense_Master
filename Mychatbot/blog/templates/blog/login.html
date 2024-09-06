@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            background: url("{% static 'images/darkblue12.png' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial;
+        }
+
+        form{
+            width:400px;
+            height:400px;
+            /* background: rgb(255, 255, 255); */
+            /* background: url("{% static 'images/small1.png' %}"); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* opacity:0.5; */
+            color: black;
+            padding:50px 30px;
+            margin: 100px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.558);
+            color:white;
+            font-size: 18px;
+            
+        }
+
+        form label{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        input{
+            width:250px;
+            height:20px;
+            border-radius: 10px;
+            border: none;
+            padding:2px 6px;
+            font-size: 16px;
+        }
+
+        #d12{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        button{
+            margin-top: 30px;
+            background: blueviolet;
+            width:150px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background: rgb(91, 0, 176);
+        }
+
+        button:active{
+            background: rgb(91, 0, 176);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.542);
+        }
+
+        #dha{
+            margin-top: 20px;
+        }
+
+        #clickh
+        {
+            color: rgba(16, 8, 240, 0.596);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <center>
+
+        <form method="post" action="{% url 'loginpass' %}">
+            <h2> <b> Login </b> </h2>
+            {% csrf_token %}
+            <div id="d1">
+                <div id="d12">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="logpass">Password:</label>
+                    <input type="password" id="logpass" name="logpass" required>
+
+                </div>
+            </div>
+            <center>
+                <button type="submit"> Login </button>
+                <p id="dha">Don't have an account? <a id="clickh" href="{% url 'open_signup' %}">Click here</a></p>
+            </center>
+        </form>
+        {% if error %}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                alert("{{ error }}");
+            });
+        </script>
+        {% endif %}
+    </center>
+
+
+
+</body>
+</html>

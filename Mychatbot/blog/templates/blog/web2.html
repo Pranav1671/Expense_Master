@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/web2.css' %}"/>
+    <!-- <link rel="stylesheet" href="/blog/static/blog/web2.css"> -->
+
+</head>
+<body>
+    
+    <div id="container1">
+
+        <div id="container11" align="center">
+
+            <nav>
+                
+                
+                <div class="navd1" align="left">
+                    <!-- <a href=""> Logo </a> -->
+                    <!-- <img src="/blog/static/images/Icons/Logos/logo4.png" id="logo" width="150px"> -->
+                    <img src="{% static 'images/Icons/Logos/logo4.png' %}" id="logo" width="150px">
+                </div>
+                
+                <div class="navd2" align="center">
+                    <a href="{% url 'openweb' %}"> Home </a>
+                    <a href=""> MyExpenses </a>
+                    <a href="openweb#container4"> Features </a>
+                    <a href="openweb#container6"> Questions </a>
+                </div>
+
+                <div class="navd3" align="right">
+                    <!-- <a href=""> Profile </a> -->
+                    <!-- <img src="/blog/static/images/Icons/Profile/profile12.png" id="profile" width="70px"> -->
+                    <a href="{% url 'open_html' %}">
+                        <img src="{% static 'images/Icons/Profile/profile12.png' %}"  id="profile" width="70px">
+                    </a>
+                </div>
+
+            </nav>
+            
+        </div>
+
+    </div>
+
+    <div id="calc">
+
+        <div id="calcdiv">
+
+            <h2> Enter Your Expense Data </h2>
+
+            <textarea id="txt1"></textarea>
+
+            <button id="calcbutton"> Calculate </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="evalue" align="center">
+
+        <p id="pval">  </p>
+
+    </div>
+
+    <!-- <script src="/blog/static/javascript/web2.js">  </script> -->
+    <script src="{% static 'javascript/web2.js' %}"></script>
+
+</body>
+</html>

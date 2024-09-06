@@ -1,0 +1,304 @@
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            font-family: Verdana, sans-serif;
+            /* box-sizing: border-box; */
+        }
+
+
+        #h21,#h22,#h23,#h24,#h25{
+            font-size: 40px;
+        }
+
+        .h3{
+            font-size: 28px;
+            padding-top: 20px;
+        }
+
+        a{
+            text-decoration:none;
+            color: white;
+        }
+
+        a:hover{
+            color:blue;
+            /* font-size:20px; */
+        }
+
+        a:active{
+            font-size:25px;
+        }
+
+        body{
+            /* width: 1500px; */
+            width:100%;
+        }
+
+        #container1{
+            background: linear-gradient(90deg, rgba(10,0,176,1) 0%, rgba(214,25,136,1) 34%, rgba(173,83,83,1) 55%, rgba(0,212,255,1) 94%);
+        }
+
+
+        #container11 {
+            max-width: 100%;
+            background: rgba(74, 74, 74, 0.272);
+            backdrop-filter: blur(5px);
+            max-height: 22vh;
+
+            /* border: 5px solid black; */
+
+        }
+
+        #profile{
+            margin-top: -20px;
+        }
+
+        #logo{
+            margin-top: -55px;
+        }
+
+
+        #container11 nav {
+
+            /* border: 5px solid white; */
+
+            display: flex;
+            padding: 60px 0px;
+            word-spacing: 40px;
+            font-size: 18px;
+            width: 80%; /* Set fixed width to 80% of the screen */
+            max-width: 1600px; /* Add max-width to limit the width */
+            justify-content: space-between;
+        }   
+
+        #d1{
+            display: flex;
+            /* border: 5px solid black; */
+            width:80%;
+            max-width: 1600px;
+            align-items: center;
+            margin: 0 auto; 
+            padding:80px;
+        }
+
+       
+
+        #d12{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin-left: 100px;
+        }
+
+        #d12 input{
+            min-height: 30px;
+        }
+
+        #d12 select{
+            min-height: 40px;
+        }
+
+        label{
+            margin-top: 10px;
+        }
+
+        #b1{
+            /* margin-top: 20px; */
+            width:100px;
+            height:40px;
+            border-radius: 15px;
+            background: rgb(33, 47, 239);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #b1:hover{
+            background: rgb(0, 12, 175);
+        }
+
+        #b1:active{
+            background: rgb(0, 12, 175);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.684);
+        }
+
+        #d111 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-size: cover; /* Ensure the background image covers the circle */
+            background-repeat: no-repeat;
+            border: 10px solid transparent;
+        }
+
+        /* Styling for the button */
+        #chooseBtn {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Hide input by default */
+        #profilePicInput {
+            display: none;
+        }
+
+        /* Show input when label is clicked */
+        #chooseBtn:focus + #profilePicInput {
+            display: block;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="container1">
+
+        <div id="container11" align="center">
+
+            <nav>
+                
+                
+                <div class="navd1" align="left">
+                    <!-- <a href=""> Logo </a> -->
+                    <!-- <img src="/blog/static/images/Icons/Logos/logo4.png" id="logo" width="150px"> -->
+                    <img src="{% static 'images/Icons/Logos/logo4.png' %}" id="logo" width="150px">
+                </div>
+                
+                <div class="navd2" align="center">
+                    <a href="{% url 'openweb' %}"> Home </a>
+                    <a href="{% url 'my_expense_view' %}"> MyExpenses </a>
+                    <a href="{% url 'openweb' %}#container4"> Features </a>
+                    <a href="{% url 'openweb' %}#container6"> Questions </a>
+                </div>
+
+                <div class="navd3" align="right">
+                    <!-- <a href=""> Profile </a> -->
+                    <!-- <img src="/blog/static/images/Icons/Profile/profile12.png" id="profile" width="70px"> -->
+                    <img src="{% static 'images/Icons/Profile/profile12.png' %}" id="profile" width="70px">
+
+                </div>
+
+            </nav>
+            
+        </div>
+
+    </div>
+    
+    <form method="post" action="{% url 'create_user_profile' %}">
+        {% csrf_token %}        
+        <div id="d1">
+
+            <div id="d11">
+    
+                <div id="d111">
+    
+                    <label for="profilePicInput" id="chooseBtn">Choose Profile Picture</label>
+        
+                    <input type="file" id="profilePicInput" accept="image/*" onchange="previewImage(event)">
+    
+                </div>
+    
+            </div>
+    
+            <div id="d12">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value=""> Not Specified </option> Empty option
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            
+                <label for="DOB">DOB:</label>
+                <input type="date" id="DOB" name="DOB">
+            
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+    
+        </div>
+    
+        <center>
+    
+            <button type="submit" id="b1"> Save </button>
+    
+        </center>
+
+
+    </form>
+
+
+    
+
+
+
+
+    <script>
+        // JavaScript function to preview the selected image inside the circle
+        function previewImage(event) {
+            const input = event.target;
+            const file = input.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageSrc = e.target.result;
+                    const circle = document.getElementById('d111');
+                    circle.style.backgroundImage = `url(${imageSrc})`;
+
+                    // Generate random color for border
+                    const randomColor = getRandomColor();
+                    circle.style.border = `10px solid ${randomColor}`;
+
+                    // Hide the label
+                    const chooseBtn = document.getElementById('chooseBtn');
+                    chooseBtn.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Function to generate random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ExpenseMaster </title>
+
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/mywebstyle.css' %}"/>
+    <!-- <link rel="stylesheet" type="text/css" href="/blog/static/blog/mywebstyle.css"/> -->
+    <style>
+
+
+        #container1{
+            background: url("{% static 'images/svg-wave.jpg' %}");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center -100px;
+        }
+
+        #container3{
+            margin: 0 auto;
+            margin-top: 10px;
+
+            /* border:10px solid black; */
+            
+            background: url("{% static 'images/particles1.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 100px;
+            z-index: 101;
+            /* height:50px; */
+            width:60px;
+            height: 60px;
+            font-size: 30px;
+            border: none;
+            outline: none;
+            background-color: #00000072;
+            color: white;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 50%;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        #logo{
+            margin: -85px;
+        }
+
+        #profile{
+            margin-top: -20px;
+        }
+
+        #container11{
+            max-height: 21vh;
+        }
+
+        .t8{
+            padding-bottom: 30px;
+        }
+       
+        .footer1{
+            margin-bottom: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"> <b> ↑ </b> </button>
+
+    <div id="container1">
+
+        <div id="container11" align="center">
+
+            <nav>
+                
+                
+                <div class="navd1" align="left">
+                    <!-- <a href=""> Logo </a> -->
+                    <!-- <img src="/blog/static/images/Icons/Logos/logo4.png" id="logo" width="150px"> -->
+                    <img src="{% static 'images/Icons/Logos/logo4.png' %}"  id="logo" width="150px">
+                </div>
+                
+                <div class="navd2" align="center">
+                    <a href=""> Home </a>
+                    <a href="{% url 'my_expense_view' %}"> MyExpenses </a>
+                    <a href="#container4"> Features </a>
+                    <a href="#container6"> Questions </a>
+                </div>
+
+                <div class="navd3" align="right">
+                    <!-- <a href=""> Profile </a> -->
+                    <!-- <img src="/blog/static/images/Icons/Profile/profile12.png" id="profile" width="70px"> -->
+                    <a href="{% url 'open_html' %}">
+                        <img src="{% static 'images/Icons/Profile/profile12.png' %}"  id="profile" width="70px">
+                    </a>
+                </div>
+
+
+            </nav>
+            
+        </div>
+
+        <div id="container12">
+
+            <div id="container121">
+
+                <!-- <img src="/blog/static/images/phone3.png" id="phone" height="600px" /> -->
+                <img src="{% static 'images/phone3.png' %}"  id="phone" height="600px">
+
+                <div id="container122">
+
+                    <p id="p1"> Meet <b> ExpenseMaster</b>, <br>your personal money manager </p>
+                    <p id="p3"> Expensemaster is Pranav's first expense manager and shopping assistant application. </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+    <div id="container2" align="center">
+
+        <div id="container21">
+
+            <!-- <p id="p2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis enim aliquid nemo, est animi voluptas ducimus dignissimos ratione, eius accusamus perferendis fuga necessitatibus magnam, ipsa doloribus quae modi laborum consequatur. Saepe corporis repellat placeat quisquam, assumenda officiis tenetur. Similique, ex? Molestias in quo at obcaecati aut ea dolores quidem aliquid, placeat nesciunt commodi eos harum doloremque voluptate voluptatum optio exercitationem et illum quasi, officiis iusto. Quod cumque a deserunt enim culpa consequatur eius fugiat odit numquam animi quis ab tenetur illo voluptates, nihil unde facere officia cupiditate? Deserunt, labore alias hic corporis vel animi cum voluptatem unde nobis nostrum corrupti dolore ratione repellendus, impedit obcaecati, sunt voluptates! Molestiae, facilis repudiandae. In sapiente doloribus recusandae sit amet sed possimus quo. Fugiat non eligendi consequatur suscipit sit veniam quae fuga est corporis ullam soluta dignissimos, sapiente ut ea aut totam delectus nihil molestias, ad saepe autem distinctio eaque. Eligendi beatae maxime, officiis dolore repellendus quas. Illo ipsum commodi ipsam deserunt, temporibus, possimus quo, cupiditate iure eos ut omnis iste deleniti. Ducimus, dolorem minus. Quaerat nobis praesentium cumque fugiat ex corrupti pariatur aut ut, animi nemo quasi, facere, minima aliquam delectus autem iure consequuntur saepe recusandae qui. Repellat ratione magni voluptas, hic totam adipisci error tempora mollitia reprehenderit cupiditate et vitae quaerat itaque accusamus quae voluptates asperiores dolor animi assumenda dicta facere, eaque sit? Aut tenetur, debitis ducimus dignissimos ipsam inventore voluptates doloremque cumque libero voluptas ipsa ut iure recusandae sed dicta repudiandae nisi ex accusamus commodi nemo culpa incidunt? Nihil, ex possimus illum earum impedit error! Quos repellendus vero, asperiores eius inventore doloremque dolorum sit omnis suscipit quasi quod, explicabo fugit laudantium nobis minus error eligendi alias in numquam, autem similique maxime! Quam, quibusdam quaerat rerum iusto minima molestias consequuntur quis illum voluptate nemo mollitia cumque culpa ratione tenetur voluptatibus! Placeat maiores eum distinctio saepe incidunt veritatis eligendi sapiente asperiores temporibus? Quae odio eaque quis eum et soluta eveniet tenetur nulla dolor exercitationem voluptates aliquam animi numquam, qui nam itaque laudantium voluptatem, voluptatibus nobis delectus amet dignissimos dicta. Iure, ratione quibusdam, magni maxime ea cum quas eum sequi perspiciatis molestiae suscipit unde laboriosam aliquam cupiditate laudantium quaerat natus voluptatibus numquam. Fugit, adipisci illum. Magnam voluptates repudiandae, natus odit quibusdam deserunt tempore amet adipisci exercitationem in id molestiae consequuntur optio voluptatem recusandae doloribus, enim rem incidunt sunt excepturi debitis! Sequi qui dolorem voluptatum consequatur quas facilis, quae fugit officia! Ad quia odio eligendi ex aliquid beatae, amet totam soluta voluptas quasi commodi tempora odit. Excepturi obcaecati nostrum voluptatibus sunt ex non ipsam. Nobis qui ullam reiciendis consequatur neque nisi maiores quam modi cum voluptates numquam suscipit perferendis provident voluptatibus, unde veritatis consectetur porro accusantium. Nam fuga, consequatur officia temporibus pariatur eius nobis neque minima debitis eaque molestias animi facere cumque ipsum quis deserunt rerum repellendus. Officia nihil dolor, sit nemo repellendus libero esse quam cupiditate animi illo sunt deserunt aperiam? Molestiae deserunt dolore nostrum, dolorum neque ex ratione, in modi aliquid porro, tenetur ipsam. Accusantium architecto in reprehenderit pariatur, vero ratione autem id? </p> -->
+
+            <h2 id="h21"> OVERVIEW </h2> <br>
+
+            <div id="design1" align="center">
+
+                <p id="p4">  </p> 
+                <p id="p5">  </p> 
+                <p id="p6">  </p>
+                <p id="p7">  </p> 
+                <p id="p8">  </p> 
+
+            </div>
+
+            <br>
+
+            <p id="p9" > ExpenseMaster is the best expense tracker app which helps you to track all your spends on a <br>daily, weekly & monthly basis. </p>
+            <br><br><br>
+            <div id="container22">
+
+                <div id="container221">
+
+                    <!-- <img src="/blog/static/images/users/users6.png" height="120px"> -->
+                    <img src="{% static 'images/users/users6.png' %}" height="120px"><br><br>
+                    <p> HAPPY USER </p> <br>
+                    <p> 5 million + </p>
+
+                </div>
+
+                <div id="container222">
+
+                    <!-- <img src="/blog/static/images/message/message4.png" height="120px"> -->
+                    <img src="{% static 'images/message/message4.png' %}" height="120px""><br><br>
+                    <p> SOCIAL SHARING </p> <br>
+                    <p> 10 million + </p>
+
+                </div>
+
+                <div id="container223">
+
+                    <!-- <img src="/blog/static/images/downloads/download2.png" height="120px"> -->
+                    <img src="{% static 'images/downloads/download2.png' %}" height="120px"><br><br>
+                    <p> APP DOWNLOADS </p> <br>
+                    <p> 8 million + </p>
+
+                </div>
+
+                <div id="container224">
+
+                    <!-- <img src="/blog/static/images/rating/rating3.png" height="120px"> -->
+                    <img src="{% static 'images/rating/rating3.png' %}" height="120px"><br><br>
+                    <p> POSITIVE RATINGS </p> <br>
+                    <p> 90K + </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="container3" align="center">
+
+        <div id="container31">
+        
+            <h2 id="h22"> HOW IT WORKS </h2> <br>
+
+            <div id="design2" align="center">
+
+                <p id="p10">  </p> 
+                <p id="p11">  </p> 
+                <p id="p12">  </p>
+                <p id="p13">  </p> 
+                <p id="p14">  </p> 
+
+            </div>
+
+            <br>
+
+            <p id="p15" > ExpenseMaster is the best expense tracker app which helps you to track all your spends on a <br>daily, weekly & monthly bases. </p>
+
+        </div>
+
+        <div id="container32"> 
+
+            <!-- <img src="/blog/static/images/instruction1.png" height="500px"> -->
+            <img src="{% static 'images/instruction1.png' %}" height="500px">
+            <!-- <img src="/blog/static/images/instruction2.png" height="700px"> -->
+            <img src="{% static 'images/instruction2.png' %}"  height="700px">
+            <!-- <img src="/blog/static/images/instruction3.png" height="500px"> -->
+            <img src="{% static 'images/instruction3.png' %}" height="500px">
+
+        </div>
+
+        <div id="container33">
+
+            <div id="container331">
+
+                <button id="b1"> 01 </button>
+                <p id="p16"> <b> Set a budget </b> </p>
+                <p id="p17"></p>
+                <p id="p18"> Set your budget for adding expenses so <br>you can check and track your expense. </p>
+
+            </div>
+
+            <div id="container332">
+
+                <button id="b2"> 02 </button>
+                <p id="p19"> <b> Add your expenses / income </b>  </p>
+                <p id="p20"></p>
+                <p id="p21"> Add your daily expenses with different categories so you <br>can track it. </p>
+
+            </div>
+
+            <div id="container333">
+
+                <button id="b3"> 03 </button>
+                <p id="p22"> <b> Get categorised reports </b> </p>
+                <p id="p23"></p>
+                <p id="p24"> You can check categorical expenses with <br>graphs. </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="container4" align="center">
+
+        <div id="container41">
+        
+            <h2 id="h23"> AMAZING FEATURES </h2> <br>
+
+            <div id="design3" align="center">
+
+                <p id="p25">  </p> 
+                <p id="p26">  </p> 
+                <p id="p27">  </p>
+                <p id="p28">  </p> 
+                <p id="p29">  </p> 
+
+            </div>
+
+            <br>
+
+            <p id="p30" > ExpenseMaster will help you keep track of your expenses, manage your finances better and save your <br>money effortlessly. </p>
+
+        </div>
+
+        <div id="container42">
+
+            <div id="container421">
+
+                <!-- <img src="/blog/static/images/smartphone1.png" id="ico1" width="50px"> -->
+                <img src="{% static 'images/smartphone1.png' %}" id="ico1" width="50px">
+
+                <h2 class="h3"> Easy to use </h2>
+                <p> ExpenseMaster is easy to use. Simply you can <br>add expense, track expense, split money <br>and watch your shopping history. </p>
+
+            </div>
+
+            <div id="container422">
+
+                <!-- <img src="/blog/static/images/lock1.png" id="ico2" width="50px"> -->
+                <img src="{% static 'images/lock1.png' %}" id="ico2" width="50px">
+
+                <h2 class="h3"> Secured </h2>
+                <p> you can set passlock / security lock for <br>your application. </p>
+
+            </div>
+
+
+            <!-- <img src="/blog/static/images/phone11.png" id="phone2" width="600px" height="600px"> -->
+            <img src="{% static 'images/phone11.png' %}"id="phone2" width="600px" height="600px">
+
+
+            <div id="container423">
+
+                <!-- <img src="/blog/static/images/drop1.png" id="ico3" width="50px"> -->
+                <img src="{% static 'images/drop1.png' %}" id="ico3" width="50px">
+
+                <h2 class="h3"> Simple & clean design </h2>
+                <p> Simple design with all feature. easily <br>check your expense report with graphs. </p>
+
+            </div>
+
+            <div id="container424">
+
+                <!-- <img src="/blog/static/images/check-mark1.png" id="ico4" width="50px"> -->
+                <img src="{% static 'images/check-mark1.png' %}" id="ico4" width="50px">
+
+                <h2 class="h3"> Solves your everyday problem / <br>real problem </h2>
+                <p> You can solve your every day problem <br>using ExpenseMaster. Add expense, track <br>expense and get Graph. </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="container5" align="center">
+
+        <div id="container51">
+        
+            <h2 id="h24"> FEATURES </h2> <br>
+
+            <div id="design4" align="center">
+
+                <p id="p31">  </p> 
+                <p id="p32">  </p> 
+                <p id="p33">  </p>
+                <p id="p34">  </p> 
+                <p id="p35">  </p> 
+
+            </div>
+
+            <br>
+
+            <p id="p36" > ExpenseMaster is an incredible expense tracker app that mobilizes all your financial activities <br>and helps you monitor your everyday expenses. </p>
+
+        </div>
+
+        <div id="container52">
+
+            <div id="front">  </div>
+
+            <div class="container521">
+
+                <div class="myslides sl1">
+
+                    <div class="slidesnumber"> 1/5 </div>
+                    <!-- <img src="/blog/static/images/detective.png"> -->
+                    <img src="{% static 'images/detective.png' %}">
+
+                    <div class="slidestext"> Track your <br>Expenses </div>
+
+                </div>
+
+                <div class="myslides sl2">
+
+                    <div class="slidesnumber"> 2/5 </div>
+                    <!-- <img src="/blog/static/images/history.png"> -->
+                    <img src="{% static 'images/history.png' %}">
+                    <div class="slidestext"> Know your <br>History </div>
+
+                </div>
+
+                <div class="myslides sl3">
+
+                    <div class="slidesnumber"> 3/5 </div>
+                    <!-- <img src="/blog/static/images/shopping.png"> -->
+                    <img src="{% static 'images/shopping.png' %}">
+                    <div class="slidestext"> Know what <br>to Shop </div>
+
+                </div>
+
+                <div class="myslides sl4">
+
+                    <!-- <div class="slidesnumber"> 4/5 </div> -->
+                    <img src="/blog/static/images/notify.png">
+                    <img src="{% static 'images/notify.png' %}">
+                    <div class="slidestext"> Get <br>Notified </div>
+
+                </div>
+
+                <div class="myslides sl5">
+
+                    <div class="slidesnumber"> 5/5 </div>
+                    <!-- <img src="/blog/static/images/bill.png"> -->
+                    <img src="{% static 'images/bill.png' %}">
+                    <div class="slidestext"> Know your <br>Balances </div>
+
+                </div>
+
+            </div>
+
+            <div id="back">  </div>
+
+        </div>
+
+    </div>
+
+    <div id="container6" align="center">
+
+        <div id="container61">
+
+            <h2 id="h25"> FREQUENTLY ASKED QUESTIONS </h2> <br>
+
+            <div id="design5" >
+
+                <p id="p37">  </p> 
+                <p id="p38">  </p> 
+                <p id="p39">  </p>
+                <p id="p40">  </p> 
+                <p id="p41">  </p> 
+
+            </div>
+
+        </div>
+
+        <div id="container62">
+
+            <div id="container621">
+
+                <p class="q q1"> How does ExpenseMaster Get it's Information? </p>
+                <button class="toggleButton toggleButton1"> + </button>
+                <div class="hide hide1"> ExpenseMaster Searches for your E-Receipts from your Inbox. </div>
+
+            </div>
+
+            <div id="container622">
+
+                <p class="q q2"> ExpenseMaster is not showing me Any Information? </p>
+                <button class="toggleButton toggleButton2"> + </button>
+                <div class="hide hide2"> This can happen when ExpenseMaster Doesn’t find the right E-Receipts - may be you have a forwarded mail from your friends. ExpenseMaster never reads your personal inbox. </div>
+
+            </div>
+
+            <div id="container623">
+
+                <p class="q q3"> How secure is ExpenseMaster? </p>
+                <button class="toggleButton toggleButton3"> + </button>
+                <div class="hide hide3"> Data is transmitted securely via SSL (TLS 1.2) which makes your data perfectly secure. </div>
+
+            </div>
+
+            <div id="container624">
+
+                <p class="q q4"> How ExpenseMaster Protects my privacy? </p>
+                <button class="toggleButton toggleButton4"> + </button>
+                <div class="hide hide4"> We only search for E-receipts and nothing else. we don’t allow third party access and we don’t share your personal information. ExpenseMaster respects your privacy. </div>
+
+            </div>
+
+            <div id="container625">
+
+                <p class="q q5"> What if ExpenseMaster Doesn't support my Vendors? </p>
+                <button class="toggleButton toggleButton5"> + </button>
+                <div class="hide hide5"> Don't worry. we are continuously adding support for more vendors and more businesses. </div>
+
+            </div>
+
+        </div>
+
+        <center>
+            <p class="t1"></p>
+            <!-- <img class="t2" src="/blog/static/images/Icons/Instagram/Instagram_icon.png" height="50px"> -->
+            <img src="{% static 'images/Icons/Instagram/Instagram_icon.png' %}" height="50px" class="footer1">
+
+            <!-- <img class="t3" src="/blog/static/images/Icons/Linkedin/linkedin-icon.png" height="50px"> -->
+            <img src="{% static 'images/Icons/Linkedin/linkedin-icon.png' %}" height="50px" class="footer1">
+
+            <!-- <img class="t4" src="/blog/static/images/Icons/Whatsapp/whatsapp-icon.png" height="50px"> -->
+            <img src="{% static 'images/Icons/Whatsapp/whatsapp-icon.png' %}" height="50px" class="footer1">
+
+            <!-- <img class="t5" src="/blog/static/images/Icons/Gmail/gmail-icon.png" height="50px"> -->
+            <img src="{% static 'images/Icons/Gmail/gmail-icon.png' %}"  height="50px" class="footer1">
+    
+            <p class="t8"> Copyright © by ExpenseMaster 2024. All right reserved. </p>
+        </center>
+
+
+    </div>
+
+
+
+
+    <!-- <script src="/blog/static/javascript/script.js"></script> -->
+    <script src="{% static 'javascript/script.js' %}"></script>
+
+</body>
+</html>
